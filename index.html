@@ -14,9 +14,8 @@
 <meta name="theme-color" content="#0b1f33">
 <link rel="alternate" hreflang="ko" href="https://www.the-way.biz/?lang=ko">
 <link rel="alternate" hreflang="en" href="https://www.the-way.biz/?lang=en">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&family=Noto+Serif+KR:wght@500;700;900&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
 <!-- [운영 설정] Google Analytics 4 측정 ID를 받으면 아래 주석을 풀고 G-XXXX 를 바꾸세요.
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-XXXXXXX');</script>
@@ -27,19 +26,19 @@
   --paper:#f7f2e8; --paper2:#efe6d4; --ink:#1d2430; --muted:#5d6675;
   --brass:#b98535; --brass2:#d9a95b; --rose:#9b3b2f;
   --radius:14px; --max:1180px;
-  --serif:'Noto Serif KR','Cormorant Garamond',serif;
-  --sans:'Noto Sans KR',system-ui,-apple-system,'Segoe UI',sans-serif;
+  --serif:"Pretendard Variable",Pretendard,-apple-system,BlinkMacSystemFont,system-ui,"Apple SD Gothic Neo","Malgun Gothic",sans-serif;
+  --sans:"Pretendard Variable",Pretendard,-apple-system,BlinkMacSystemFont,system-ui,"Apple SD Gothic Neo","Malgun Gothic",sans-serif;
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth;scroll-padding-top:72px}
-body{margin:0;font-family:var(--sans);color:var(--ink);background:var(--paper);line-height:1.75;word-break:keep-all;-webkit-font-smoothing:antialiased}
+body{margin:0;font-family:var(--sans);letter-spacing:-.01em;color:var(--ink);background:var(--paper);line-height:1.75;word-break:keep-all;-webkit-font-smoothing:antialiased}
 html[lang="ko"] .en, html[lang="en"] .ko{display:none !important}
 html[lang="en"] body{line-height:1.65}
 img{max-width:100%;display:block}
 a{color:inherit}
 .wrap{max-width:var(--max);margin:0 auto;padding:0 24px}
 .eyebrow{font-size:.8rem;letter-spacing:.18em;text-transform:uppercase;color:var(--brass);font-weight:700}
-h1,h2,h3{font-family:var(--serif);line-height:1.3;margin:0}
+h1,h2,h3{font-family:var(--serif);line-height:1.3;margin:0;letter-spacing:-.02em;font-weight:700}
 h2{font-size:clamp(1.7rem,3.2vw,2.5rem);margin:.4rem 0 1rem}
 h3{font-size:1.25rem}
 .lead{font-size:1.08rem;color:var(--muted);max-width:760px}
@@ -72,10 +71,10 @@ header.solid{background:rgba(11,31,51,.96);box-shadow:0 2px 14px rgba(0,0,0,.25)
 .hero{position:relative;min-height:100vh;min-height:100svh;display:flex;align-items:center;color:#fff;overflow:hidden;
   background:radial-gradient(1200px 600px at 75% 15%,rgba(217,169,91,.22),transparent 60%),linear-gradient(180deg,#081624 0%,#0b1f33 45%,#123150 100%);padding:120px 0 140px}
 .hero-grid{display:grid;grid-template-columns:1.25fr .75fr;gap:56px;align-items:center}
-.hero h1{font-size:clamp(2.6rem,6.4vw,5.2rem);font-weight:900;letter-spacing:-.01em}
+.hero h1{font-size:clamp(2.6rem,6.4vw,5.2rem);font-weight:800;letter-spacing:-.035em}
 .hero h1 .sub1{display:block;font-size:.5em;font-weight:700;margin-top:.35em;color:var(--brass2)}
 .hero .tagline{font-family:var(--serif);font-size:clamp(1.1rem,2.2vw,1.5rem);margin:1.4rem 0 .5rem;opacity:.95}
-.hero .years{font-family:'Cormorant Garamond',serif;font-size:1.3rem;letter-spacing:.3em;opacity:.7}
+.hero .years{font-family:var(--sans);font-size:1.15rem;font-weight:300;letter-spacing:.25em;opacity:.7}
 .hero p.intro{max-width:600px;opacity:.85;margin:1.2rem 0 2rem}
 .hero .cta{display:flex;gap:12px;flex-wrap:wrap}
 .portrait{position:relative;border-radius:8px;overflow:hidden;box-shadow:0 30px 60px rgba(0,0,0,.45);border:6px solid rgba(255,255,255,.08);max-width:380px;justify-self:end}
@@ -115,7 +114,7 @@ header.solid{background:rgba(11,31,51,.96);box-shadow:0 2px 14px rgba(0,0,0,.25)
 .chapter{padding:90px 0;border-top:1px solid rgba(0,0,0,.06)}
 .chapter:nth-of-type(even){background:#fbf8f2}
 .ch-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:56px;align-items:start}
-.ch-num{font-family:'Cormorant Garamond',serif;font-size:4.2rem;line-height:1;color:var(--brass);opacity:.55}
+.ch-num{font-family:var(--sans);font-size:3.4rem;font-weight:800;line-height:1;color:var(--brass);opacity:.45;letter-spacing:-.03em}
 .ch-period{display:inline-block;margin:.4rem 0 1rem;padding:.2rem .8rem;border-radius:999px;background:var(--sea);color:#fff;font-size:.82rem;font-weight:700}
 .timeline{list-style:none;margin:0;padding:0;border-left:2px solid var(--paper2)}
 .timeline li{position:relative;padding:0 0 22px 26px}
@@ -229,7 +228,7 @@ footer a{color:var(--brass2)}
 .projects{background:#fff}
 .pcat{margin-top:46px}
 .pcat-head{display:flex;align-items:baseline;gap:14px;border-bottom:2px solid var(--paper2);padding-bottom:10px;margin-bottom:18px}
-.pcat-head .num{font-family:'Cormorant Garamond',serif;font-size:2rem;color:var(--brass);line-height:1}
+.pcat-head .num{font-family:var(--sans);font-size:2rem;color:var(--brass);line-height:1}
 .pcat-head h3{font-size:1.35rem}
 .pcat-head p{margin:0;color:var(--muted);font-size:.92rem}
 .pgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
@@ -263,7 +262,7 @@ footer a{color:var(--brass2)}
 .hero .partners{margin-top:.6rem;font-size:.85rem;letter-spacing:.08em;color:var(--brass2);opacity:.95}
 .press{list-style:none;padding:0;margin:26px 0 0;counter-reset:pr;border-top:1px solid #eee}
 .press li{counter-increment:pr;display:grid;grid-template-columns:44px 120px 1fr;gap:4px 16px;padding:18px 0;border-bottom:1px solid #eee;align-items:baseline}
-.press li:before{content:counter(pr,decimal-leading-zero);grid-row:span 2;font-family:'Cormorant Garamond',serif;font-size:1.6rem;color:var(--brass);line-height:1}
+.press li:before{content:counter(pr,decimal-leading-zero);grid-row:span 2;font-family:var(--sans);font-size:1.6rem;color:var(--brass);line-height:1}
 .press time{font-weight:700;color:var(--sea3);font-size:.9rem}
 .press .outlet{grid-column:2;grid-row:2;font-size:.78rem;color:var(--muted)}
 .press a{grid-column:3;grid-row:1;font-family:var(--serif);font-weight:700;font-size:1.05rem;text-decoration:none;color:var(--ink)}
@@ -445,7 +444,7 @@ footer a{color:var(--brass2)}
       <text x="960" y="44" font-size="13" fill="#5d6675" font-weight="700" letter-spacing="3">KOREA</text>
       <path d="M60 200 C 120 200 150 200 200 200 S 280 200 330 200 C 400 200 420 260 470 260 C 560 260 640 140 720 150 S 800 200 850 210 C 900 220 930 160 980 150 S 1040 150 1060 190 C 1080 230 1110 250 1140 270" fill="none" stroke="url(#rg)" stroke-width="4" stroke-linecap="round"/>
       <path d="M1140 270 L 1150 320" stroke="#9b3b2f" stroke-width="2.5" stroke-dasharray="5 6"/>
-      <g font-family="Noto Sans KR, sans-serif" font-size="13" fill="#1d2430" text-anchor="middle">
+      <g font-family="Pretendard Variable, Pretendard, sans-serif" font-size="13" fill="#1d2430" text-anchor="middle">
         <circle cx="60" cy="200" r="8" fill="#1d4a73"/><text x="60" y="232" font-weight="700" class="svgko">서드턴</text><text x="60" y="250" fill="#5d6675" font-size="11">Souderton 1858</text>
         <circle cx="200" cy="200" r="7" fill="#1d4a73"/><text x="200" y="176" font-weight="700">Lancaster</text><text x="200" y="160" fill="#5d6675" font-size="11">F&amp;M 1882</text>
         <circle cx="330" cy="200" r="7" fill="#1d4a73"/><text x="330" y="232" font-weight="700">Drew</text><text x="330" y="250" fill="#5d6675" font-size="11">Madison NJ 1885</text>
@@ -477,7 +476,7 @@ footer a{color:var(--brass2)}
 <section class="chapter" id="america">
   <div class="wrap ch-grid">
     <div>
-      <div class="ch-num">I</div>
+      <div class="ch-num">01</div>
       <h2><span class="ko">펜실베이니아의 소년</span><span class="en">A Pennsylvania Boy</span></h2>
       <span class="ch-period">1858 – 1884</span>
       <p class="lead">
@@ -504,7 +503,7 @@ footer a{color:var(--brass2)}
 <section class="chapter" id="sending">
   <div class="wrap ch-grid">
     <div>
-      <div class="ch-num">II</div>
+      <div class="ch-num">02</div>
       <h2><span class="ko">부르심, 안수, 그리고 태평양</span><span class="en">Called, Ordained, Sent Across the Pacific</span></h2>
       <span class="ch-period">1884 – 1885</span>
       <p class="lead">
@@ -526,7 +525,7 @@ footer a{color:var(--brass2)}
 <!-- ================= CHAPTER 3: KOREA MINISTRY ================= -->
 <section class="chapter" id="korea">
   <div class="wrap">
-    <div class="ch-num">III</div>
+    <div class="ch-num">03</div>
     <h2><span class="ko">한국에서의 17년: 학교, 교회, 그리고 글</span><span class="en">Seventeen Years in Korea: School, Church and the Written Word</span></h2>
     <span class="ch-period">1885 – 1902</span>
     <p class="lead">
@@ -581,7 +580,7 @@ footer a{color:var(--brass2)}
 <!-- ================= CHAPTER 4: SINKING ================= -->
 <section class="sinking" id="sinking">
   <div class="wrap">
-    <div class="eyebrow"><span class="ko">IV · 1902년 6월 11일</span><span class="en">IV · June 11, 1902</span></div>
+    <div class="eyebrow"><span class="ko">04 · 1902년 6월 11일</span><span class="en">04 · June 11, 1902</span></div>
     <h2><span class="ko">목포에 닿지 못한 배</span><span class="en">The Ship That Never Reached Mokpo</span></h2>
     <div class="sink-grid">
       <div>
@@ -619,7 +618,7 @@ footer a{color:var(--brass2)}
 <!-- ================= CHAPTER 5: SURVEY ================= -->
 <section class="survey" id="survey">
   <div class="wrap">
-    <div class="eyebrow"><span class="ko">V · 지금, 바다로</span><span class="en">V · Now, to the Sea</span></div>
+    <div class="eyebrow"><span class="ko">05 · 지금, 바다로</span><span class="en">05 · Now, to the Sea</span></div>
     <h2><span class="ko">아펜젤러 순직 침몰선 해양조사</span><span class="en">The Appenzeller Shipwreck Survey</span></h2>
     <p class="lead">
       <span class="ko">한국기독교역사연구소와 해양조사 추진위원회는 1902년 침몰한 구마가와마루의 위치를 찾고 있습니다. 관보·해상 기록·재판 기록·생존자 증언 같은 1902년의 사료와 어민들의 기억, 그리고 현대 해양 탐사 장비가 한자리에 모였습니다. 124년 만에 처음으로, 그가 잠든 바다를 직접 찾아가는 조사입니다.</span>
@@ -673,8 +672,8 @@ footer a{color:var(--brass2)}
         </g>
         <path d="M0 300 C 80 292 140 306 220 298 S 380 290 520 302 V360 H0Z" fill="#3b3326"/>
         <g transform="translate(210 262)" opacity=".85"><path d="M0 36 L110 36 L118 20 L8 22Z" fill="#2a2a2a"/><rect x="48" y="2" width="9" height="22" fill="#2a2a2a"/></g>
-        <text x="265" y="248" text-anchor="middle" font-size="40" fill="#fff" font-family="serif">?</text>
-        <text x="20" y="340" font-size="12" fill="#e8d9bd" font-family="Noto Sans KR, sans-serif">Illustration · 개념도</text>
+        <text x="265" y="248" text-anchor="middle" font-size="40" fill="#fff" font-family="Pretendard Variable, Pretendard, sans-serif">?</text>
+        <text x="20" y="340" font-size="12" fill="#e8d9bd" font-family="Pretendard Variable, Pretendard, sans-serif">Illustration · 개념도</text>
       </svg>
     </div>
   </div>
