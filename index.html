@@ -259,7 +259,9 @@ footer a{color:var(--brass2)}
 
 
 /* partners, press, pilgrimage */
-.hero .partners{margin-top:.6rem;font-size:.85rem;letter-spacing:.08em;color:var(--brass2);opacity:.95}
+.hero .partners{display:inline-flex;align-items:center;gap:10px;margin-top:1rem;padding:.55rem 1rem;border:1px solid rgba(217,169,91,.55);border-radius:12px;background:rgba(217,169,91,.08);font-size:.92rem;line-height:1.5;color:#f1dcb4}
+.hero .partners b{color:var(--brass2);font-weight:700}
+.hero .partners .dot{flex:none;width:8px;height:8px;border-radius:50%;background:var(--brass2)}
 .press{list-style:none;padding:0;margin:26px 0 0;counter-reset:pr;border-top:1px solid #eee}
 .press li{counter-increment:pr;display:grid;grid-template-columns:44px 120px 1fr;gap:4px 16px;padding:18px 0;border-bottom:1px solid #eee;align-items:baseline}
 .press li:before{content:counter(pr,decimal-leading-zero);grid-row:span 2;font-family:var(--sans);font-size:1.6rem;color:var(--brass);line-height:1}
@@ -381,7 +383,7 @@ footer a{color:var(--brass2)}
         <span class="en">From Souderton, Pennsylvania to Eocheongdo, Korea</span>
       </p>
       <div class="years">1858 — 1902</div>
-      <div class="partners"><span class="ko">한국기독교역사연구소 × 도서출판 더웨이</span><span class="en">Institute for Korean Church History × The Way Publishing</span></div>
+      <div class="partners"><span class="dot" aria-hidden="true"></span><span class="ko"><b>도서출판 더웨이</b>는 <b>한국기독교역사연구소</b>의 아펜젤러 순직 침몰선 해양조사를 지원하며 알리고 있습니다.</span><span class="en"><b>The Way Publishing</b> supports and promotes the Appenzeller shipwreck survey of the <b>Institute for Korean Church History</b>.</span></div>
       <p class="intro">
         <span class="ko">1902년 6월 11일, 성경 번역 회의를 위해 목포로 가던 배가 어청도 앞바다에서 가라앉았습니다. 함께 탄 이들을 구하려던 그는 끝내 돌아오지 못했습니다. 124년이 지난 지금도 그의 몸은 바다 아래에 있습니다. 이제 그 바다를 찾아 나섭니다.</span>
         <span class="en">On June 11, 1902, the ship carrying him to a Bible translators' meeting in Mokpo sank off Eocheongdo Island. He died trying to save those traveling with him. After 124 years, his body still lies beneath the Yellow Sea. Now we are going to search those waters.</span>
@@ -1119,7 +1121,7 @@ footer a{color:var(--brass2)}
       </div>
       <div>
         <b><span class="ko">문의</span><span class="en">Contact</span></b>
-        <p><span class="ko">사무국</span><span class="en">Secretariat</span>: <span data-cfg="office"></span><br>
+        <p><span class="ko">주소</span><span class="en">Address</span>: <span data-cfg="office"></span><br>
         <span class="ko">이메일</span><span class="en">Email</span>: <a data-cfg-mail="email"></a><br>
         <span class="ko">전화</span><span class="en">Phone</span>: <span data-cfg="phone"></span></p>
       </div>
@@ -1158,7 +1160,7 @@ const CONFIG = {
   formEndpoint: '',      // 약정·기도 신청을 받을 주소(Formspree, Google Apps Script 등). 비우면 이메일 창이 열립니다
   email: 'inusel@naver.com',
   phone: '010-5354-2894',
-  office: '(03986) 서울시 마포구 동교로23길 118 열송재 (한국기독교역사연구소)',
+  office: '서울시 강남구 논현로 213 (도서출판 더웨이)',
   anniversary: '2027-06-11T00:00:00+09:00'
 };
 
