@@ -16,10 +16,11 @@
 <link rel="alternate" hreflang="en" href="https://www.the-way.biz/?lang=en">
 <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
 <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
-<!-- [운영 설정] Google Analytics 4 측정 ID를 받으면 아래 주석을 풀고 G-XXXX 를 바꾸세요.
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX"></script>
-<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-XXXXXXX');</script>
--->
+<link rel="icon" href="theway-emblem.svg" type="image/svg+xml">
+<link rel="icon" href="favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<!-- 방문 통계: Microsoft Clarity (프로젝트 zj2ukkgr9u, 대시보드 clarity.microsoft.com) -->
+<script type="text/javascript">(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script","zj2ukkgr9u");</script>
 <style>
 :root{
   --sea:#0b1f33; --sea2:#123150; --sea3:#1d4a73; --foam:#e8eef3;
@@ -316,6 +317,22 @@ footer a{color:var(--brass2)}
 @media (max-width:820px){.tw-foot{grid-template-columns:1fr}.tw-svc{grid-template-columns:repeat(2,1fr)}}
 @media (max-width:520px){.tw-svc{grid-template-columns:1fr}.tw-book{grid-template-columns:120px 1fr;gap:16px;padding:18px}.tw-book img{width:120px}}
 
+/* logo, consent */
+.tw-logo{display:flex;align-items:center;gap:18px;margin:.4rem 0 1rem}
+.tw-logo svg{width:72px;height:72px;flex:none;border-radius:18px;box-shadow:0 8px 20px rgba(11,31,51,.18)}
+.tw-logo h2{margin:0}
+.tw-logo small{display:block;font-size:.78rem;letter-spacing:.32em;color:var(--brass);font-weight:800;margin-top:2px}
+.hero .partners .pmark{flex:none;width:26px;height:26px}
+.hero .partners .pmark svg{width:26px;height:26px;border-radius:7px}
+.consent{display:flex;gap:8px;align-items:flex-start;margin:14px 0 0;font-weight:500;font-size:.88rem;color:var(--muted)}
+.consent input{width:auto;margin-top:4px}
+.consent a{color:var(--sea3)}
+.ftlogo{display:flex;align-items:center;gap:10px;margin-top:14px}
+.ftlogo svg{width:34px;height:34px;border-radius:9px}
+.ftlogo span{color:#fff;font-weight:800}
+.ftlogo small{display:block;color:var(--brass2);font-size:.68rem;letter-spacing:.25em;font-weight:800}
+footer .legal a{color:#fff;font-weight:700}
+
 /* responsive */
 @media (max-width:1024px){
   .menu .lk{display:none}
@@ -413,7 +430,13 @@ footer a{color:var(--brass2)}
         <span class="en">From Souderton, Pennsylvania to Eocheongdo, Korea</span>
       </p>
       <div class="years">1858 — 1902</div>
-      <div class="partners"><span class="dot" aria-hidden="true"></span><span class="ko"><b>도서출판 더웨이</b>는 <b>한국기독교역사연구소</b>의 아펜젤러 순직 침몰선 해양조사를 지원하며 알리고 있습니다.</span><span class="en"><b>The Way Publishing</b> supports and promotes the Appenzeller shipwreck survey of the <b>Institute for Korean Church History</b>.</span></div>
+      <div class="partners"><span class="pmark" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120">
+  <defs><linearGradient id="road" x1="0" y1="1" x2="0" y2="0"><stop offset="0" stop-color="#e0b468"/><stop offset="1" stop-color="#b98535"/></linearGradient></defs>
+  <rect x="0" y="0" width="120" height="120" rx="28" fill="#0b1f33"/>
+  <path d="M56.5 50 C 57 66, 44 82, 24 106 L 96 106 C 78 84, 63 66, 63.5 50 Z" fill="url(#road)"/>
+  <path d="M60 56 C 60.5 68, 57 82, 59 102" fill="none" stroke="#0b1f33" stroke-width="3" stroke-linecap="round" stroke-dasharray="6 7"/>
+  <path d="M60 13 L60 41 M49.5 23 L70.5 23" stroke="#f3e6cc" stroke-width="6" stroke-linecap="round"/>
+</svg></span><span class="ko"><b>도서출판 더웨이</b>는 <b>한국기독교역사연구소</b>의 아펜젤러 순직 침몰선 해양조사를 지원하며 알리고 있습니다.</span><span class="en"><b>The Way Publishing</b> supports and promotes the Appenzeller shipwreck survey of the <b>Institute for Korean Church History</b>.</span></div>
       <p class="intro">
         <span class="ko">1902년 6월 11일, 성경 번역 회의를 위해 목포로 가던 배가 어청도 앞바다에서 가라앉았습니다. 함께 탄 이들을 구하려던 그는 끝내 돌아오지 못했습니다. 124년이 지난 지금도 그의 몸은 바다 아래에 있습니다. 이제 그 바다를 찾아 나섭니다.</span>
         <span class="en">On June 11, 1902, the ship carrying him to a Bible translators' meeting in Mokpo sank off Eocheongdo Island. He died trying to save those traveling with him. After 124 years, his body still lies beneath the Yellow Sea. Now we are going to search those waters.</span>
@@ -904,6 +927,7 @@ footer a{color:var(--brass2)}
         </div>
         <label><span class="ko">남기실 말씀 (선택)</span><span class="en">Message (optional)</span></label>
         <textarea name="message"></textarea>
+        <label class="consent"><input type="checkbox" name="consent" required><span class="ko">개인정보 수집·이용에 동의합니다. (필수 · <a href="privacy.html" target="_blank" rel="noopener">개인정보처리방침</a>)</span><span class="en">I agree to the collection and use of my personal information. (Required · <a href="privacy.html?lang=en" target="_blank" rel="noopener">Privacy Policy</a>)</span></label>
         <button class="btn btn-gold" type="submit" style="margin-top:14px"><span class="ko">참여 신청 보내기</span><span class="en">Send</span></button>
         <div class="okmsg"><span class="ko">감사합니다. 준비가 되는 대로 안내해 드리겠습니다.</span><span class="en">Thank you. We will be in touch as plans take shape.</span></div>
       </form>
@@ -941,6 +965,7 @@ footer a{color:var(--brass2)}
         </div>
         <label><span class="ko">나누고 싶은 기도 (선택)</span><span class="en">A prayer you would like to share (optional)</span></label>
         <textarea name="message"></textarea>
+        <label class="consent"><input type="checkbox" name="consent" required><span class="ko">개인정보 수집·이용에 동의합니다. (필수 · <a href="privacy.html" target="_blank" rel="noopener">개인정보처리방침</a>)</span><span class="en">I agree to the collection and use of my personal information. (Required · <a href="privacy.html?lang=en" target="_blank" rel="noopener">Privacy Policy</a>)</span></label>
         <button class="btn btn-dark" type="submit" style="margin-top:14px"><span class="ko">기도로 함께하기</span><span class="en">I will pray</span></button>
         <div class="okmsg"><span class="ko">감사합니다. 함께 기도해 주셔서 고맙습니다.</span><span class="en">Thank you for joining us in prayer.</span></div>
       </form>
@@ -1014,6 +1039,7 @@ footer a{color:var(--brass2)}
         </div>
         <label><span class="ko">남기실 말씀 (선택)</span><span class="en">Message (optional)</span></label>
         <textarea name="message"></textarea>
+        <label class="consent"><input type="checkbox" name="consent" required><span class="ko">개인정보 수집·이용에 동의합니다. (필수 · <a href="privacy.html" target="_blank" rel="noopener">개인정보처리방침</a>)</span><span class="en">I agree to the collection and use of my personal information. (Required · <a href="privacy.html?lang=en" target="_blank" rel="noopener">Privacy Policy</a>)</span></label>
         <button class="btn btn-gold" type="submit" style="margin-top:14px"><span class="ko">약정 보내기</span><span class="en">Send pledge</span></button>
         <div class="okmsg"><span class="ko">감사합니다. 담당자가 확인 후 연락드리겠습니다.</span><span class="en">Thank you. Our team will contact you shortly.</span></div>
       </form>
@@ -1138,7 +1164,13 @@ footer a{color:var(--brass2)}
 <section class="theway" id="theway">
   <div class="wrap">
     <div class="eyebrow"><span class="ko">함께하는 곳</span><span class="en">Our Supporter</span></div>
-    <h2><span class="ko">도서출판 더웨이</span><span class="en">The Way Publishing</span></h2>
+    <div class="tw-logo"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120">
+  <defs><linearGradient id="road" x1="0" y1="1" x2="0" y2="0"><stop offset="0" stop-color="#e0b468"/><stop offset="1" stop-color="#b98535"/></linearGradient></defs>
+  <rect x="0" y="0" width="120" height="120" rx="28" fill="#0b1f33"/>
+  <path d="M56.5 50 C 57 66, 44 82, 24 106 L 96 106 C 78 84, 63 66, 63.5 50 Z" fill="url(#road)"/>
+  <path d="M60 56 C 60.5 68, 57 82, 59 102" fill="none" stroke="#0b1f33" stroke-width="3" stroke-linecap="round" stroke-dasharray="6 7"/>
+  <path d="M60 13 L60 41 M49.5 23 L70.5 23" stroke="#f3e6cc" stroke-width="6" stroke-linecap="round"/>
+</svg><div><h2><span class="ko">도서출판 더웨이</span><span class="en">The Way Publishing</span></h2><small>THE WAY PUBLISHING</small></div></div>
     <p class="lead">
       <span class="ko">도서출판 더웨이는 교회의 역사를 기록하고 보존하는 출판사입니다. 교회 역사 편찬부터 자서전과 에세이 출판까지, 사라지기 쉬운 신앙의 기록을 책으로 남깁니다. 한국기독교역사연구소의 아펜젤러 순직 침몰선 해양조사를 지원하며 그 길을 알리고 있습니다.</span>
       <span class="en">The Way Publishing records and preserves the history of the church. From church histories to autobiographies and essays, we turn fragile records of faith into lasting books. We support and promote the Institute for Korean Church History's Appenzeller shipwreck survey.</span>
@@ -1208,6 +1240,13 @@ footer a{color:var(--brass2)}
     <div class="cols">
       <div>
         <b style="font-family:var(--serif);font-size:1.2rem"><span class="ko">그 길 · 아펜젤러 순직 기념 사업</span><span class="en">The Way · Appenzeller Memorial Project</span></b>
+        <div class="ftlogo"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120">
+  <defs><linearGradient id="road" x1="0" y1="1" x2="0" y2="0"><stop offset="0" stop-color="#e0b468"/><stop offset="1" stop-color="#b98535"/></linearGradient></defs>
+  <rect x="0" y="0" width="120" height="120" rx="28" fill="#0b1f33"/>
+  <path d="M56.5 50 C 57 66, 44 82, 24 106 L 96 106 C 78 84, 63 66, 63.5 50 Z" fill="url(#road)"/>
+  <path d="M60 56 C 60.5 68, 57 82, 59 102" fill="none" stroke="#0b1f33" stroke-width="3" stroke-linecap="round" stroke-dasharray="6 7"/>
+  <path d="M60 13 L60 41 M49.5 23 L70.5 23" stroke="#f3e6cc" stroke-width="6" stroke-linecap="round"/>
+</svg><div><span>더웨이</span><small>THE WAY PUBLISHING</small></div></div>
         <p><span class="ko">해양조사: 한국기독교역사연구소<br>지원·홍보: 도서출판 더웨이</span><span class="en">Sea survey: Institute for Korean Church History (IKCH)<br>Support &amp; outreach: The Way Publishing</span></p>
       </div>
       <div>
@@ -1225,7 +1264,7 @@ footer a{color:var(--brass2)}
     <div class="credits">
       <span class="ko">이미지: 아펜젤러 초상(1901)·배재학당 학생들(1887) — W. E. Griffis, <i>A Modern Pioneer in Korea</i>(1912), 퍼블릭 도메인 / 『죠션 크리스도인 회보』(1899) 퍼블릭 도메인 / 양화진 추모비 — Schlarpi, CC BY-SA 3.0 (Wikimedia Commons). 연표 출처: 기독교대한감리회 역사, 아펜젤러순직기념관, Griffis(1912), 한국민족문화대백과사전, Boston University History of Missiology.</span>
       <span class="en">Images: Appenzeller portrait (1901) and Pai Chai students (1887) from W. E. Griffis, <i>A Modern Pioneer in Korea</i> (1912), public domain; Korean Christian Advocate (1899), public domain; Yanghwajin cenotaph by Schlarpi, CC BY-SA 3.0 (Wikimedia Commons). Timeline sources: Korean Methodist Church history, Appenzeller Memorial Mission Hall, Griffis (1912), Encyclopedia of Korean Culture, BU History of Missiology.</span>
-      <div style="margin-top:8px">© 2026 한국기독교역사연구소 · 도서출판 더웨이 · www.the-way.biz</div>
+      <div class="legal" style="margin-top:10px"><a href="privacy.html"><span class="ko">개인정보처리방침</span><span class="en">Privacy Policy</span></a> · © 2026 한국기독교역사연구소 · 도서출판 더웨이 · www.the-way.biz</div>
     </div>
   </div>
 </footer>
@@ -1336,19 +1375,26 @@ function renderProgress(){
   document.getElementById('goalTxt').textContent=(ko?'목표 ':'Goal ')+CONFIG.goalKRW.toLocaleString()+(ko?'원':' KRW');
 }
 
-/* ---------- forms ---------- */
+/* ---------- forms: Google Forms 접수 ---------- */
+const GF = { url:'https://docs.google.com/forms/d/e/1FAIpQLSfYEw8aaHOfOEfM1Oobj7ncd-EB7QN0uOQfWueYJU3cNwaI7A/formResponse',
+  f:{kind:'entry.418983324',name:'entry.36312657',church:'entry.1574550314',contact:'entry.1212095874',country:'entry.1926477011',projects:'entry.1363322307',message:'entry.1302898171',lang:'entry.1977598370'} };
+const KIND = {prayer:'기도 동참', join:'기념 사업 참여', pledge:'후원 약정'};
 document.querySelectorAll('.js-form').forEach(f=>f.addEventListener('submit',async e=>{
   e.preventDefault();
-  const fd = new FormData(f); const data = Object.fromEntries(fd); data.kind=f.dataset.kind; data.lang=document.documentElement.lang;
-  if(fd.getAll('projects').length) data.projects = fd.getAll('projects').join(', ');
-  if(CONFIG.formEndpoint){
-    try{ await fetch(CONFIG.formEndpoint,{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify(data)}); }catch(err){}
-  } else {
-    const subj = ({pledge:'[후원 약정 / Pledge] ',join:'[기념 사업 참여 / Join] '}[data.kind]||'[기도 동참 / Prayer] ')+(data.name||'');
-    const body = Object.entries(data).map(([k,v])=>k+': '+v).join('\n');
-    location.href='mailto:'+CONFIG.email+'?subject='+encodeURIComponent(subj)+'&body='+encodeURIComponent(body);
+  const fd = new FormData(f); const d = Object.fromEntries(fd);
+  const ko = document.documentElement.lang==='ko';
+  let msg = d.message||''; if(d.amount) msg = `[금액] ${d.amount} / [방식] ${d.freq||''}\n` + msg;
+  const vals = {kind:KIND[f.dataset.kind]||f.dataset.kind, name:d.name||'', church:d.church||'', contact:d.contact||'', country:d.country||'', projects:fd.getAll('projects').join(', '), message:msg, lang:document.documentElement.lang};
+  const body = new URLSearchParams(); for(const [k,v] of Object.entries(vals)) body.append(GF.f[k], v);
+  const btn = f.querySelector('button[type=submit]'); btn.disabled=true; const old=btn.innerHTML; btn.textContent = ko?'보내는 중…':'Sending…';
+  try{
+    await fetch(GF.url,{method:'POST',mode:'no-cors',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:body.toString()});
+    f.querySelector('.okmsg').style.display='block'; f.reset(); syncPledge();
+  }catch(err){
+    const subj='['+vals.kind+'] '+vals.name; const mb=Object.entries(vals).map(([k,v])=>k+': '+v).join('\n');
+    location.href='mailto:'+CONFIG.email+'?subject='+encodeURIComponent(subj)+'&body='+encodeURIComponent(mb);
   }
-  f.querySelector('.okmsg').style.display='block'; f.reset(); syncPledge();
+  btn.disabled=false; btn.innerHTML=old;
 }));
 document.querySelectorAll('[data-soon]').forEach(a=>a.addEventListener('click',e=>{e.preventDefault(); alert(document.documentElement.lang==='ko'?'자료를 준비하고 있습니다. 곧 올려 드리겠습니다.':'This resource is being prepared and will be posted soon.');}));
 
