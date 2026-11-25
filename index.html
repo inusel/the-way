@@ -1379,12 +1379,13 @@ function renderProgress(){
 const GF = { url:'https://docs.google.com/forms/d/e/1FAIpQLSfYEw8aaHOfOEfM1Oobj7ncd-EB7QN0uOQfWueYJU3cNwaI7A/formResponse',
   f:{kind:'entry.418983324',name:'entry.36312657',church:'entry.1574550314',contact:'entry.1212095874',country:'entry.1926477011',projects:'entry.1363322307',message:'entry.1302898171',lang:'entry.1977598370'} };
 const KIND = {prayer:'기도 동참', join:'기념 사업 참여', pledge:'후원 약정'};
+const PJ = {'sea-service':'해상 추모예배','copy-relay':'신약 필사 릴레이','remembrance-sunday':'기억 주일','pilgrimage':'순례 참가','prayer-relay':'44일 기도 릴레이','exhibition':'순회전 유치','records':'자료·후손 제보','translation':'번역 봉사','sister-church':'자매교회'};
 document.querySelectorAll('.js-form').forEach(f=>f.addEventListener('submit',async e=>{
   e.preventDefault();
   const fd = new FormData(f); const d = Object.fromEntries(fd);
   const ko = document.documentElement.lang==='ko';
   let msg = d.message||''; if(d.amount) msg = `[금액] ${d.amount} / [방식] ${d.freq||''}\n` + msg;
-  const vals = {kind:KIND[f.dataset.kind]||f.dataset.kind, name:d.name||'', church:d.church||'', contact:d.contact||'', country:d.country||'', projects:fd.getAll('projects').join(', '), message:msg, lang:document.documentElement.lang};
+  const vals = {kind:KIND[f.dataset.kind]||f.dataset.kind, name:d.name||'', church:d.church||'', contact:d.contact||'', country:d.country||'', projects:fd.getAll('projects').map(v=>PJ[v]||v).join(', '), message:msg, lang:document.documentElement.lang};
   const body = new URLSearchParams(); for(const [k,v] of Object.entries(vals)) body.append(GF.f[k], v);
   const btn = f.querySelector('button[type=submit]'); btn.disabled=true; const old=btn.innerHTML; btn.textContent = ko?'보내는 중…':'Sending…';
   try{
