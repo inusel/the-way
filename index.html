@@ -317,6 +317,23 @@ footer a{color:var(--brass2)}
 @media (max-width:820px){.tw-foot{grid-template-columns:1fr}.tw-svc{grid-template-columns:repeat(2,1fr)}}
 @media (max-width:520px){.tw-svc{grid-template-columns:1fr}.tw-book{grid-template-columns:120px 1fr;gap:16px;padding:18px}.tw-book img{width:120px}}
 
+/* film */
+.film{background:linear-gradient(180deg,#0b1f33,#102a44);color:#fff;padding:70px 0 80px}
+.film .eyebrow{color:var(--brass2)}
+.film h2{color:#fff;margin:.3rem 0 .6rem}
+.film .lead{color:rgba(255,255,255,.78);max-width:720px;margin:0 0 26px}
+.film-box{position:relative;aspect-ratio:16/9;border-radius:18px;overflow:hidden;background:#000;box-shadow:0 24px 60px rgba(0,0,0,.45);cursor:pointer}
+.film-box img{width:100%;height:100%;object-fit:cover;display:block;opacity:.92;transition:opacity .3s,transform .6s}
+.film-box:hover img{opacity:1;transform:scale(1.02)}
+.film-box iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.film-play{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:92px;height:92px;border-radius:50%;border:0;background:rgba(185,133,53,.95);box-shadow:0 10px 30px rgba(0,0,0,.4);cursor:pointer;display:grid;place-items:center}
+.film-play:before{content:"";margin-left:7px;border-style:solid;border-width:16px 0 16px 26px;border-color:transparent transparent transparent #fff}
+.film-box:hover .film-play{background:var(--brass2)}
+.film-dur{position:absolute;right:14px;bottom:12px;background:rgba(0,0,0,.65);color:#fff;font-size:.82rem;font-weight:700;padding:3px 9px;border-radius:6px}
+.film-meta{display:flex;flex-wrap:wrap;gap:10px 18px;margin-top:16px;font-size:.9rem;color:rgba(255,255,255,.7)}
+.film-meta a{color:var(--brass2);font-weight:700}
+@media (max-width:640px){.film{padding:50px 0 56px}.film-play{width:70px;height:70px}}
+
 /* logo, consent */
 .tw-logo{display:flex;align-items:center;gap:18px;margin:.4rem 0 1rem}
 .tw-logo svg{width:72px;height:72px;flex:none;border-radius:18px;box-shadow:0 8px 20px rgba(11,31,51,.18)}
@@ -465,6 +482,25 @@ footer .legal a{color:#fff;font-weight:700}
     <div class="stat"><b>17</b><span class="ko">년의 한국 사역</span><span class="en">years in Korea</span></div>
     <div class="stat"><b>124</b><span class="ko">년, 돌아오지 못한 몸</span><span class="en">years unrecovered</span></div>
     <div class="stat"><b id="dday">D-</b><span class="ko">순직 125주년 (2027.6.11)</span><span class="en">to the 125th anniversary</span></div>
+  </div>
+</section>
+
+<!-- ================= FILM ================= -->
+<section class="film" id="film">
+  <div class="wrap">
+    <div class="eyebrow"><span class="ko">영상으로 보는 그 길</span><span class="en">Watch the film</span></div>
+    <h2><span class="ko">3분에 담은 아펜젤러의 44년</span><span class="en">Appenzeller's 44 years in 3 minutes</span></h2>
+    <p class="lead"><span class="ko">미국 서드턴에서 제물포, 정동과 배재학당, 그리고 1902년 어청도 바다까지. 순직 125주년을 앞두고 그 길을 다시 따라갑니다.</span><span class="en">From Souderton to Chemulpo, Jeongdong and Pai Chai, and to the waters off Eocheongdo in 1902. Ahead of the 125th anniversary, we retrace the way.</span></p>
+    <div class="film-box" id="filmBox" data-ko="eOumWuyeVyo" data-en="z3f0WSqjmnQ" role="button" tabindex="0" aria-label="영상 재생 / Play video">
+      <img id="filmThumb" src="https://i.ytimg.com/vi/eOumWuyeVyo/maxresdefault.jpg" alt="" loading="lazy" onerror="this.onerror=null;this.src=this.src.replace('maxresdefault','hqdefault')">
+      <span class="film-play" aria-hidden="true"></span>
+      <span class="film-dur">3:01</span>
+    </div>
+    <div class="film-meta">
+      <span class="ko">YouTube에서 보기: <a href="https://youtu.be/eOumWuyeVyo" target="_blank" rel="noopener">한국어판</a> · <a href="https://youtu.be/z3f0WSqjmnQ" target="_blank" rel="noopener">English</a></span>
+      <span class="en">Watch on YouTube: <a href="https://youtu.be/z3f0WSqjmnQ" target="_blank" rel="noopener">English</a> · <a href="https://youtu.be/eOumWuyeVyo" target="_blank" rel="noopener">Korean</a></span>
+      <span class="ko">일부 장면은 AI로 만든 재구성 이미지입니다.</span><span class="en">Some scenes are AI-generated reconstructions.</span>
+    </div>
   </div>
 </section>
 
@@ -1397,6 +1433,14 @@ document.querySelectorAll('.js-form').forEach(f=>f.addEventListener('submit',asy
   }
   btn.disabled=false; btn.innerHTML=old;
 }));
+/* ---------- film: 누르면 재생, 화면 언어에 맞는 영상 ---------- */
+(function(){ const box=document.getElementById('filmBox'); if(!box) return;
+  const vid=()=>document.documentElement.lang==='en'?box.dataset.en:box.dataset.ko;
+  function reset(){ const id=vid(); box.innerHTML='<img id="filmThumb" alt="" src="https://i.ytimg.com/vi/'+id+'/maxresdefault.jpg" onerror="this.onerror=null;this.src=this.src.replace(\'maxresdefault\',\'hqdefault\')"><span class="film-play" aria-hidden="true"></span><span class="film-dur">3:01</span>'; box.dataset.playing=''; }
+  function play(){ if(box.dataset.playing) return; box.dataset.playing='1'; box.innerHTML='<iframe src="https://www.youtube-nocookie.com/embed/'+vid()+'?autoplay=1&rel=0&playsinline=1" title="그 길, 아펜젤러의 44년 여정" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen></iframe>'; if(window.clarity) clarity('event','film_play_'+document.documentElement.lang); }
+  box.addEventListener('click',play); box.addEventListener('keydown',e=>{ if(e.key==='Enter'||e.key===' '){ e.preventDefault(); play(); } });
+  new MutationObserver(reset).observe(document.documentElement,{attributes:true,attributeFilter:['lang']}); reset();
+})();
 document.querySelectorAll('[data-soon]').forEach(a=>a.addEventListener('click',e=>{e.preventDefault(); alert(document.documentElement.lang==='ko'?'자료를 준비하고 있습니다. 곧 올려 드리겠습니다.':'This resource is being prepared and will be posted soon.');}));
 
 /* ---------- bulletin copy ---------- */
